@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <!-- Table of content -->
+<aside>
+    <h3>Table of content</h3>
+    <ol>
+        <li>
+            <a href="#btn-cursor-tracking">Cursor Tracking</a>
+        </li>
+        <li>
+            <a href="#btn-cursor-tracking-2">Cursor Tracking 2</a>
+        </li>
+        <li>
+            <a href="#btn-cursor-tracking-3">Cursor Tracking 3</a>
+        </li>
+        <li>
+            <a href="#btn-liquid">Liquid</a>
+        </li>
+        <li>
+            <a href="#btn-fantastic">Fantastic</a>
+        </li>
+        <li>
+            <a href="#btn-blubby">Blubby</a>
+        </li>
+        <li>
+            <a href="#btn-ripple">Ripple</a>
+        </li>
+        <li>
+            <a href="#btn-flipside">Flipside</a>
+        </li>
+        <li>
+            <a href="#btn-play">Play</a>
+        </li>
+        <li>
+            <a href="#btn-magnetic">Magnetic</a>
+        </li>
+        <li>
+            <a href="#btn-animate">Animate</a>
+        </li>
+        <li>
+            <a href="#btn-toggle">Toggle</a>
+        </li>
+        <li>
+            <a href="#btn-menu">Menu</a>
+        </li>
+        <li>
+            <a href="#btn-flush">Flush</a>
+        </li>
+        <li>
+            <a href="#btn-flip">Flip</a>
+        </li>
+        <li>
+            <a href="https://144615075.hubspotpagebuilder.eu/jeremie-chabert" target="_blank" style="color: var(--primary-color);">Visiter mon portfolio</a>
+        </li>
+    </ol>
+</aside>
+
+    <!-- Button Cursor Tracking -->
+    <section id="btn-cursor-tracking">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12">
+                    <h2>1.Button Cursor Tracking</h2>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-cursor-tracking"><span>Hover me</span></button>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-cursor-tracking"><span>Hover me</span></button>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-cursor-tracking"><span>Hover me</span></button>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-cursor-tracking"><span>Hover me</span></button>
+                </div>
+                <div class="col-12">
+                    <div class="tabs">
+                    <div class="tab">
+                        <button data-btn="tab">
+                          HTML
+                        </button>
+                        <div class="content open" data-content="tab">
+                    <textarea>
+                        <button class="btn-cursor-tracking"><span>Hover me</span></button>
+                    </textarea>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <button data-btn="tab">
+                          CSS
+                        </button>
+                        <div class="content" data-content="tab">
+                            <textarea>
+                                .btn-cursor-tracking {
+                                    overflow: hidden;
+                                    margin: 0;
+                                    border: none;
+                                    outline: none;
+                                    position: relative;
+                                    padding: 1.5rem 3rem;
+                                    font-size: 1.5rem;
+                                    color: var(--white-color);
+                                    background: var(--primary-color);
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                  }
+                                  
+                                  .btn-cursor-tracking span {
+                                    position: relative;
+                                    pointer-events: none;
+                                  }
+                                  
+                                  .btn-cursor-tracking::before {
+                                    --size: 0;
+                                    content: '';
+                                    position: absolute;
+                                    left: var(--x);
+                                    top: var(--y);
+                                    width: var(--size);
+                                    height: var(--size);
+                                    background: radial-gradient(circle closest-side, var(--secondary-color), transparent);
+                                    -webkit-transform: translate(-50%, -50%);
+                                    transform: translate(-50%, -50%);
+                                    -webkit-transition: width 0.2s ease, height 0.2s ease;
+                                    transition: width 0.2s ease, height 0.2s ease;
+                                  }
+                                  
+                                  @media (hover: hover) {
+                                    .btn-cursor-tracking:hover {
+                                      cursor: pointer;
+                                    }
+                                
+                                    .btn-cursor-tracking:hover::before {
+                                        --size: 200px;
+                                      }
+                                    }
+                            </textarea>
+                        </div>
+                      </div>
+                      <div class="tab">
+                        <button data-btn="tab">
+                          JS
+                        </button>
+                        <div class="content" data-content="tab">
+                          <textarea>
+                            document.querySelectorAll('.btn-cursor-tracking').forEach(btn => {
+                                btn.addEventListener('mousemove', e => {
+                                    const rect = e.target.getBoundingClientRect();
+                                    const x = e.clientX - rect.left;
+                                    const y = e.clientY - rect.top;
+                                    btn.style.setProperty('--x', x + 'px');
+                                    btn.style.setProperty('--y', y + 'px');
+                                  });
+                            });
+                          </textarea>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Button Cursor Tracking 2 -->
+<section id="btn-cursor-tracking-2">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>2.Button Cursor Tracking 2</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-cursor-tracking-2">
+                    <span class="btn-cursor-tracking-2__circle">
+                    </span>
+                    <button class="btn-cursor-tracking-2__inner">
+                      <span class="btn-cursor-tracking-2__text">
+                        Hover me
+                      </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-cursor-tracking-2">
+                    <span class="btn-cursor-tracking-2__circle">
+                    </span>
+                    <button class="btn-cursor-tracking-2__inner">
+                      <span class="btn-cursor-tracking-2__text">
+                        Hover me
+                      </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-cursor-tracking-2">
+                    <span class="btn-cursor-tracking-2__circle">
+                    </span>
+                    <button class="btn-cursor-tracking-2__inner">
+                      <span class="btn-cursor-tracking-2__text">
+                        Hover me
+                      </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-cursor-tracking-2">
+                    <span class="btn-cursor-tracking-2__circle">
+                    </span>
+                    <button class="btn-cursor-tracking-2__inner">
+                      <span class="btn-cursor-tracking-2__text">
+                        Hover me
+                      </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <div class="btn-cursor-tracking-2">
+                        <span class="btn-cursor-tracking-2__circle">
+                        </span>
+                        <button class="btn-cursor-tracking-2__inner">
+                          <span class="btn-cursor-tracking-2__text">
+                            Hover me
+                          </span>
+                        </button>
+                    </div>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-cursor-tracking-2 {
+                                overflow: hidden;
+                                position: relative;
+                                display: inline-block;
+                              }
+                              
+                              .btn-cursor-tracking-2__circle {
+                                border-radius: 1000px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 0;
+                                height: 0;
+                                margin-left: 0;
+                                margin-top: 0;
+                                pointer-events: none;
+                              }
+                              
+                              .btn-cursor-tracking-2__inner {
+                                  display: inline-block;
+                                  margin: 0;
+                            border: none;
+                            outline: none;
+                            position: relative;
+                            padding: 1.5rem 3rem;
+                            font-size: 1.5rem;
+                            color: var(--white-color);
+                            background: var(--primary-color);
+                                  transition: 400ms;
+                                  z-index: 100000;
+                                  -webkit-appearance: none;
+                                  appearance: none;
+                              }
+                              
+                              .btn-cursor-tracking-2__text {
+                                 position: relative;
+                                 z-index: 10000;
+                              }
+                              
+                              .explode-circle {
+                                 animation: explode 0.5s forwards;
+                                 z-index: 999999;
+                              }
+                              
+                              .desplode-circle {
+                                 animation: desplode 0.5s forwards;
+                                 z-index: 999999;
+                              }
+                              
+                              @keyframes explode {
+                                0% {
+                                  width: 0px;
+                                  height: 0px;
+                                  margin-left: 0px;
+                                  margin-top: 0px;
+                                  background-color: rgba(42, 53, 80,0.2);
+                                }
+                                100% {
+                                  width: 400px;
+                                  height: 400px;
+                                  margin-left: -200px;
+                                  margin-top: -200px;
+                                  background-color: rgba(15, 205, 129, .8);
+                                }
+                              }
+                              
+                              @keyframes desplode {
+                                0% {
+                                  width: 400px;
+                                  height: 400px;
+                                  margin-left: -200px;
+                                  margin-top: -200px;
+                                  background-color: rgba(15, 205, 129, .8);
+                                }
+                                100% {
+                                  width: 0px;
+                                  height: 0px;
+                                  margin-left: 0px;
+                                  margin-top: 0px;
+                                  background-color: rgba(129, 80, 108,0.6);
+                                }
+                              }
+                        
+                              @media (hover: hover) {
+                                .btn-cursor-tracking-2__inner:hover {
+                                  cursor: pointer;
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.querySelectorAll('.btn-cursor-tracking-2__inner').forEach(function(element) {
+                            element.addEventListener('mouseenter', function(e) {
+                                const parentOffset = element.getBoundingClientRect();
+                                let relX = e.clientX - parentOffset.left;
+                                let relY = e.clientY - parentOffset.top; 
+                          
+                                const circle = element.closest('.btn-cursor-tracking-2').querySelector('.btn-cursor-tracking-2__circle');
+                          
+                                circle.style.left = relX + 'px';
+                                circle.style.top = relY + 'px';
+                                circle.classList.remove('desplode-circle');
+                                circle.classList.add('explode-circle');
+                            });
+                          
+                            element.addEventListener('mouseleave', function(e) {
+                              const parentOffset = element.getBoundingClientRect();
+                                let relX = e.clientX - parentOffset.left;
+                                let relY = e.clientY - parentOffset.top;
+                          
+                                const circle = element.closest('.btn-cursor-tracking-2').querySelector('.btn-cursor-tracking-2__circle');
+                          
+                                circle.style.left = relX + 'px';
+                                circle.style.top = relY + 'px';
+                                circle.classList.remove('explode-circle');
+                                circle.classList.add('desplode-circle');
+                            });
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Cursor Tracking 3 -->
+<section id="btn-cursor-tracking-3">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>3.Button Cursor Tracking 3</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-cursor-tracking-3">Hover me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-cursor-tracking-3">Hover me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-cursor-tracking-3">Hover me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-cursor-tracking-3">Hover me</button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-cursor-tracking-3">Hover me</button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-cursor-tracking-3 {
+                                margin: 0;
+                            border: none;
+                            outline: none;
+                            padding: 1.5rem 3rem;
+                            font-size: 1.5rem;
+                            color: var(--white-color);
+                            background: var(--primary-color);
+                            -webkit-appearance: none;
+                          appearance: none;
+                                position: relative; 
+                                display: inline-block;
+                                will-change: transform;
+                                -webkit-transition: transform 0.3s ease-out;
+                                transition: transform 0.3s ease-out;
+                              }
+                        
+                              @media (hover: hover) {
+                                .btn-cursor-tracking-3:hover {
+                                  cursor: pointer;
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const buttons = document.querySelectorAll('.btn-cursor-tracking-3');
+                          
+                            buttons.forEach(function(button) {
+                                button.addEventListener("mousemove", function(e) {
+                                    callParallax(e, button);  
+                                });
+                          
+                                button.addEventListener("mouseleave", function() {
+                                    resetParallax(button);
+                                });
+                            });
+                          
+                            function callParallax(e, button) {
+                                parallaxIt(e, button, 80);
+                            }
+                          
+                            function resetParallax(button) {
+                                animateElement(button, 0, 0);
+                            }
+                          
+                            function parallaxIt(e, button, movement) {
+                                const buttonRect = button.getBoundingClientRect();
+                                const relX = e.clientX - buttonRect.left;
+                                const relY = e.clientY - buttonRect.top;
+                                const targetX = (relX - buttonRect.width / 2) / buttonRect.width * movement;
+                                const targetY = (relY - buttonRect.height / 2) / buttonRect.height * movement;
+                          
+                                animateElement(button, targetX, targetY);
+                            }
+                          
+                            function animateElement(button, targetX, targetY) {
+                                const startX = parseFloat(button.dataset.x) || 0;
+                                const startY = parseFloat(button.dataset.y) || 0;
+                                const startTime = performance.now();
+                          
+                                function updateAnimation(currentTime) {
+                                    const progress = Math.min((currentTime - startTime) / 300, 1);
+                                    const easeProgress = easeOutQuad(progress);
+                          
+                                    const newX = startX + (targetX - startX) * easeProgress;
+                                    const newY = startY + (targetY - startY) * easeProgress;
+                          
+                                    button.style.transform = `translate(${newX}px, ${newY}px)`;
+                          
+                                    button.dataset.x = newX;
+                                    button.dataset.y = newY;
+                          
+                                    if (progress < 1) {
+                                        requestAnimationFrame(updateAnimation);
+                                    }
+                                }
+                          
+                                requestAnimationFrame(updateAnimation);
+                            }
+                          
+                            function easeOutQuad(t) {
+                                return t * (2 - t);
+                            }
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Liquid -->
+<section id="btn-liquid">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2 style="    margin-bottom: 35px;">4.Button Liquid</h2>
+            </div>
+            <div class="col-12 col-lg-4">
+                <button class="btn-liquid"><span>Hover me</span></button>
+            </div>
+            <div class="col-12 col-lg-4">
+                <button class="btn-liquid"><span>Hover me</span></button>
+            </div>
+            <div class="col-12 col-lg-4">
+                <button class="btn-liquid"><span>Hover me</span></button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-liquid"><span>Hover me</span></button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-liquid {
+                                -webkit-appearance: none;
+                                appearance: none;
+                                margin: 0;
+                                  border: none;
+                                  outline: none;
+                                  position: relative;
+                                  padding: 1.5rem 3rem;
+                                  font-size: 1.5rem;
+                                  color: var(--white-color);
+                                  background: var(--primary-color);
+                              }
+                              
+                                .btn-liquid span {
+                                  position: relative;
+                                  z-index: 2;
+                                }
+                                
+                                .btn-liquid canvas {
+                                  position: absolute;
+                                  top: -50px;
+                                  right: -50px;
+                                  bottom: -50px;
+                                  left: -50px;
+                                  z-index: 1;
+                                }
+                              
+                                @media (hover: hover) {
+                                  .btn-liquid:hover {
+                                      cursor: pointer;
+                                  }
+                                }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const buttons = document.querySelectorAll(".btn-liquid");
+                          
+                            buttons.forEach(button => {
+                              initButton(button);
+                            });
+                          });
+                          
+                          function initButton(button) {
+                            const pointsA = [],
+                                  pointsB = [],
+                                  points = 8,
+                                  viscosity = 20,
+                                  mouseDist = 70,
+                                  damping = 0.05;
+                            
+                            let mouseX = 0,
+                                mouseY = 0,
+                                relMouseX = 0,
+                                relMouseY = 0,
+                                mouseLastX = 0,
+                                mouseLastY = 0,
+                                mouseSpeedX = 0,
+                                mouseSpeedY = 0;
+                          
+                            const buttonWidth = button.offsetWidth;
+                            const buttonHeight = button.offsetHeight;
+                          
+                            const canvas = document.createElement("canvas");
+                            button.appendChild(canvas);
+                          
+                            canvas.width = buttonWidth + 100;
+                            canvas.height = buttonHeight + 100;
+                            const context = canvas.getContext("2d");
+                          
+                            button.addEventListener("mousemove", (e) => {
+                              const rect = button.getBoundingClientRect();
+                              mouseX = e.clientX;
+                              mouseY = e.clientY;
+                              relMouseX = mouseX - rect.left;
+                              relMouseY = mouseY - rect.top;
+                            });
+                          
+                            function mouseSpeed() {
+                              mouseSpeedX = mouseX - mouseLastX;
+                              mouseSpeedY = mouseY - mouseLastY;
+                              mouseLastX = mouseX;
+                              mouseLastY = mouseY;
+                              setTimeout(mouseSpeed, 50);
+                            }
+                            mouseSpeed();
+                          
+                            function addPoints(x, y) {
+                              pointsA.push(new Point(x, y, 1));
+                              pointsB.push(new Point(x, y, 2));
+                            }
+                          
+                            function Point(x, y, level) {
+                              this.x = this.ix = 50 + x;
+                              this.y = this.iy = 50 + y;
+                              this.vx = 0;
+                              this.vy = 0;
+                              this.level = level;
+                            }
+                          
+                            Point.prototype.move = function () {
+                              this.vx += (this.ix - this.x) / (viscosity * this.level);
+                              this.vy += (this.iy - this.y) / (viscosity * this.level);
+                          
+                              const dx = this.ix - relMouseX,
+                                    dy = this.iy - relMouseY;
+                              const relDist = 1 - Math.sqrt(dx * dx + dy * dy) / mouseDist;
+                          
+                              if (relDist > 0 && relDist < 1) {
+                                this.vx = (mouseSpeedX / 4) * relDist;
+                                this.vy = (mouseSpeedY / 4) * relDist;
+                              }
+                          
+                              this.vx *= 1 - damping;
+                              this.vy *= 1 - damping;
+                              this.x += this.vx;
+                              this.y += this.vy;
+                            };
+                          
+                            let x = buttonHeight / 2;
+                            for (let j = 1; j < points; j++) {
+                              addPoints(x + ((buttonWidth - buttonHeight) / points) * j, 0);
+                            }
+                            addPoints(buttonWidth - buttonHeight / 5, 0);
+                            addPoints(buttonWidth + buttonHeight / 10, buttonHeight / 2);
+                            addPoints(buttonWidth - buttonHeight / 5, buttonHeight);
+                            for (let j = points - 1; j > 0; j--) {
+                              addPoints(x + ((buttonWidth - buttonHeight) / points) * j, buttonHeight);
+                            }
+                            addPoints(buttonHeight / 5, buttonHeight);
+                            addPoints(-buttonHeight / 10, buttonHeight / 2);
+                            addPoints(buttonHeight / 5, 0);
+                          
+                            function renderCanvas() {
+                              requestAnimationFrame(renderCanvas);
+                              context.clearRect(0, 0, canvas.width, canvas.height);
+                              context.fillStyle = "#fff";
+                              context.fillRect(0, 0, canvas.width, canvas.height);
+                          
+                              pointsA.forEach(p => p.move());
+                              pointsB.forEach(p => p.move());
+                          
+                              context.fillStyle = "#1C74DC";
+                              context.beginPath();
+                              context.moveTo(pointsA[0].x, pointsA[0].y);
+                              pointsA.forEach((p, i) => {
+                                const nextP = pointsA[i + 1] || pointsA[0];
+                                const cx = (p.x + nextP.x) / 2;
+                                const cy = (p.y + nextP.y) / 2;
+                                context.quadraticCurveTo(p.x, p.y, cx, cy);
+                              });
+                              context.fill();
+                            }
+                          
+                            renderCanvas();
+                          }
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Button Fantastic -->
+ <section id="btn-fantastic">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>5.Button Fantastic</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-fantastic">Hover me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-fantastic">Hover me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-fantastic">Hover me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-fantastic">Hover me</button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-fantastic">Hover me</button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-fantastic {
+                                -webkit-appearance: none;
+                                appearance: none;
+                                width: 100%;
+                                height: 75px;
+                                padding: 0;
+                                margin: 0;
+                                border: none;
+                                outline: none;
+                                position: relative;
+                                font-size: 1.5rem;
+                                color: var(--white-color);
+                                background: var(--primary-color);
+                            }
+                            
+                            .btn-fantastic__text {
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                z-index: 1;
+                                line-height: 75px;
+                            }
+                            
+                            .btn-fantastic__twist {
+                                display: block;
+                                height: 100%;
+                                width: 25%;
+                                position: relative;
+                                float: left;
+                                margin-left: -4px;
+                            }
+                            
+                            .btn-fantastic__twist:before {
+                                content: "";
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: var(--secondary-color);
+                                bottom: 100%;
+                                position: absolute;
+                                transform-origin: center bottom 0px; 
+                                transform: matrix3d(1, 0, 0, 0, 
+                                                    0, 0, -1, -0.003, 
+                                                    0, 1, 0, 0, 
+                                                    0, 0, 0, 1);
+                                
+                            -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                            -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                             -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                                transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+                            }
+                            
+                            .btn-fantastic__twist:after {
+                                content: "";
+                                left: 0;
+                                position: absolute;
+                                width: 100%;
+                                top: 100%;
+                                height: 100%;
+                                background: var(--primary-color);
+                                transform-origin: center top 0px;
+                                transform: matrix3d(1, 0, 0, 0, 
+                                                    0, 1, 0, 0, 
+                                                    0, 0, 1, -0.003, 
+                                                    0, -75, 0, 1);
+                                
+                            -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                            -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                             -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                                transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(1) {
+                                margin-left: 0;
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(1):before,
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(1):after {
+                                transition-delay: 0s;
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(2):before,
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(2):after {
+                                transition-delay: 0.1s;
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(3):before,
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(3):after {
+                                transition-delay: 0.2s;
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(4):before,
+                            .btn-fantastic .btn-fantastic__twist:nth-of-type(4):after {
+                                transition-delay: 0.3s;
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__text:nth-of-type(1) {
+                                bottom: 100%;
+                                transform-origin: center bottom 0px; 
+                                transform: matrix3d(1, 0, 0, 0, 
+                                                    0, 0, -1, -0.003, 
+                                                    0, 1, 0, 0, 
+                                                    0, 0, 0, 1);
+                                
+                            -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                            -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                             -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                                transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+                            }
+                            
+                            .btn-fantastic .btn-fantastic__text:nth-of-type(2) {
+                                top: 100%;
+                                transform-origin: center top 0px;
+                                transform: matrix3d(1, 0, 0, 0, 
+                                                    0, 1, 0, 0, 
+                                                    0, 0, 1, -0.003, 
+                                                    0, -75, 0, 1);
+                                
+                            -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                            -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                             -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+                                transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+                            }
+                            
+                            @media (hover: hover) {
+                              .btn-fantastic:hover {
+                                cursor: pointer;
+                              }
+                            
+                                .btn-fantastic:hover .btn-fantastic__twist:before {
+                                    background: var(--secondary-color);
+                                    transform: matrix3d(1, 0, 0, 0, 
+                                                        0, 1, 0, 0, 
+                                                        0, 0, 1, 0.003, 
+                                                        0, 75, 0, 1);
+                                }
+                                
+                                .btn-fantastic:hover .btn-fantastic__twist:after {
+                                    background: var(--primary-color);
+                                    transform: matrix3d(1, 0, 0, 0, 
+                                                        0, 0, -1, 0.003, 
+                                                        0, 1, 0, 0, 
+                                                        0, 0, 0, 1);
+                                }
+                            
+                                .btn-fantastic:hover .btn-fantastic__text:nth-of-type(1) {
+                                    transform: matrix3d(1, 0, 0, 0, 
+                                                        0, 1, 0, 0, 
+                                                        0, 0, 1, 0.003, 
+                                                        0, 75, 0, 1);
+                                }
+                                
+                                .btn-fantastic:hover .btn-fantastic__text:nth-of-type(2) {
+                                    transform: matrix3d(1, 0, 0, 0, 
+                                                        0, 0, -1, 0.003, 
+                                                        0, 1, 0, 0, 
+                                                        0, 0, 0, 1);
+                                }
+                            
+                            }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            document.querySelectorAll(".btn-fantastic").forEach(function (btnFantastic) {
+                                let btnFantasticText = document.createElement("div");
+                                btnFantasticText.classList.add("btn-fantastic__text");
+                                while (btnFantastic.firstChild) {
+                                    btnFantasticText.appendChild(btnFantastic.firstChild);
+                                }
+                                btnFantastic.appendChild(btnFantasticText);
+                        
+                                let btnFantasticTextClone = btnFantasticText.cloneNode(true);
+                                btnFantastic.appendChild(btnFantasticTextClone);
+                        
+                                for (let i = 0; i < 4; i++) {
+                                    let twist = document.createElement("span");
+                                    twist.classList.add("btn-fantastic__twist");
+                                    btnFantastic.appendChild(twist);
+                                }
+                            });
+                        
+                            document.querySelectorAll(".btn-fantastic__twist").forEach(function (twist) {
+                                let width = twist.offsetWidth; 
+                                twist.style.width = (width + 3) + "px"
+                            });
+                        });
+                        
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Blubby -->
+<section id="btn-blubby">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>6.Button Blubby</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-blubby">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-blubby">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-blubby">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-blubby">Click me</button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-blubby">Click me</button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-blubby {
+                                display: inline-block;
+                                padding: 1.5rem 3rem;
+                                font-size: 1.5rem;
+                                -webkit-appearance: none;
+                                appearance: none;
+                                background: var(--primary-color);
+                                color: var(--white-color);
+                                border: none;
+                                cursor: pointer;
+                                position: relative;
+                                -webkit-transition: transform ease-in 0.1s;
+                                transition: transform ease-in 0.1s;
+                                
+                                &:focus {
+                                  outline: 0;
+                                }
+                                
+                                &:before, &:after {
+                                  position: absolute;
+                                  content: '';
+                                  display: block;
+                                  width: 140%;
+                                  height: 100%;
+                                  left: -20%;
+                                  z-index: -1000;
+                                  -webkit-transition: all ease-in-out 0.5s;
+                                  transition: all ease-in-out 0.5s;
+                                  background-repeat: no-repeat;
+                                }
+                                
+                                &:before {
+                                  display: none;
+                                  top: -75%;
+                                  background-image:  
+                                    radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle,  transparent 20%, var(--primary-color) 20%, transparent 30%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%), 
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle,  transparent 10%, var(--primary-color) 15%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%);
+                                background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+                                }
+                                
+                                &:after {
+                                  display: none;
+                                  bottom: -75%;
+                                  background-image:  
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%), 
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle,  transparent 10%, var(--primary-color) 15%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%),
+                                  radial-gradient(circle, var(--primary-color) 20%, transparent 20%);
+                                background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+                                }
+                               
+                                &:active {
+                                  transform: scale(0.9);
+                                }
+                                
+                                &.animate {
+                                  &:before{
+                                    display: block;
+                                    animation: topBubbles ease-in-out 0.75s forwards;
+                                  }
+                                  &:after{
+                                    display: block;
+                                    animation: bottomBubbles ease-in-out 0.75s forwards;
+                                  }
+                                }
+                              }
+                              
+                              @keyframes topBubbles {
+                                0%{
+                                  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+                                }
+                                  50% {
+                                    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+                               100% {
+                                  background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+                                background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+                                }
+                              }
+                              
+                              @keyframes bottomBubbles {
+                                0%{
+                                  background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+                                }
+                                50% {
+                                  background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+                               100% {
+                                  background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+                                background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        const animateButton = function(e) {
+                            e.preventDefault;
+                            e.target.classList.remove('animate');
+                            e.target.classList.add('animate');
+                            setTimeout(function(){
+                              e.target.classList.remove('animate');
+                            }, 700);
+                          };
+                          
+                          const bubblyButtons = document.querySelectorAll('.btn-blubby');
+                          
+                          for (let i = 0; i < bubblyButtons.length; i++) {
+                            bubblyButtons[i].addEventListener('click', animateButton, false);
+                          }
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Ripple -->
+<section id="btn-ripple">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>7.Button Ripple</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-ripple">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-ripple">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-ripple">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-ripple">Click me</button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-ripple">Click me</button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-ripple {
+                                margin: 0;
+                                  border: none;
+                                  outline: none;
+                                  position: relative;
+                                  padding: 1.5rem 3rem;
+                                  font-size: 1.5rem;
+                                  color: var(--white-color);
+                                  background: var(--primary-color);
+                                  -webkit-appearance: none;
+                                appearance: none;
+                                user-select: none;
+                                -webkit-transition: background-color .6s ease;
+                                transition: background-color .6s ease;
+                                overflow: hidden;
+                                }
+                              
+                                .btn-ripple:after {
+                                  content: "";
+                                  position: absolute;
+                                  width: 0;
+                                  height: 0;
+                                  top: 50%;
+                                  left: 50%;
+                                  top: var(--mouse-y);
+                                  left: var(--mouse-x);
+                                  transform-style: flat;
+                                  -webkit-transform: translate3d(-50%,-50%,0);
+                                  transform: translate3d(-50%,-50%,0);
+                                  background: rgba(15, 205, 129, .5);
+                                  -webkit-border-radius: 100%;
+                                  border-radius: 100%;
+                                  -webkit-transition: width .3s ease, height .3s ease;
+                                  transition: width .3s ease, height .3s ease;
+                                }
+                              
+                                .btn-ripple:active::after {
+                                    width: 300px;
+                                    height: 300px;
+                                  }
+                              
+                              @media (hover: hover) {
+                                .btn-ripple:hover {
+                                  cursor: pointer;
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.querySelectorAll('.btn-ripple').forEach(btn => {
+                            btn.addEventListener('mousemove', (e) => {
+                              const x = e.offsetX;
+                              const y = e.offsetY;
+                              btn.style.setProperty('--mouse-x', x + "px");
+                              btn.style.setProperty('--mouse-y', y + "px");
+                          });
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Flipside -->
+<section id="btn-flipside">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>8.Button Flipside</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-flipside">
+                    <div class="btn-flipside__back">
+                        <h3>Modal 1</h3>
+                      <button class="btn-flipside__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--white-color)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                      </button>
+                    </div>
+                    <div class="btn-flipside__front">Click me</div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-flipside">
+                    <div class="btn-flipside__back">
+                        <h3>Modal 2</h3>
+                      <button class="btn-flipside__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--white-color)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                      </button>
+                    </div>
+                    <div class="btn-flipside__front">Click me</div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-flipside">
+                    <div class="btn-flipside__back">
+                        <h3>Modal 3</h3>
+                      <button class="btn-flipside__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--white-color)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                      </button>
+                    </div>
+                    <div class="btn-flipside__front">Click me</div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="btn-flipside">
+                    <div class="btn-flipside__back">
+                        <h3>Modal 4</h3>
+                      <button class="btn-flipside__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--white-color)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                      </button>
+                    </div>
+                    <div class="btn-flipside__front">Click me</div>
+                  </div>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <div class="btn-flipside">
+                        <div class="btn-flipside__back">
+                            <h3>Modal 1</h3>
+                          <button class="btn-flipside__close">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--white-color)"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                          </button>
+                        </div>
+                        <div class="btn-flipside__front">Click me</div>
+                      </div>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            html.is-open {
+                                position: relative;
+                                overflow: hidden;
+                                }
+                                
+                                html::before {
+                                  position: absolute;
+                                  content: '';
+                                  background: var(--system-color);
+                                  opacity: .8;
+                                  left: 0;
+                                  top: 0;
+                                  width: 100%;
+                                  height: 100%;
+                                  z-index: 9;
+                                  -webkit-transform: translateX(-100%);
+                                  transform: translateX(-100%);
+                                  -webkit-transition: transform .8s ease;
+                                  transition: transform .8s ease;
+                                  }
+                                
+                                html.is-open::before {
+                                  transform: translateX(0);
+                                }
+                                
+                                .btn-flipside {
+                                  display: block;
+                                  position: relative;
+                                  width: 200px;
+                                  height: 75px;
+                                  -webkit-transition: width 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000),
+                                              height 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000),
+                                              transform 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+                                  transition: width 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000),
+                                              height 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000),
+                                              transform 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+                                  transform-style: preserve-3d;
+                                  transform-origin: 50% 50%;
+                                  text-align: center;
+                                }
+                                
+                                .btn-flipside__front {
+                                  position: absolute;
+                                  display: block;
+                                  width: 100%;
+                                  height: 100%;
+                                  margin: 0;
+                                    border: none;
+                                    outline: none;
+                                    position: relative;
+                                    padding: 1.5rem 3rem;
+                                    font-size: 1.5rem;
+                                    color: var(--white-color);
+                                    background: var(--primary-color);
+                                    -webkit-appearance: none;
+                                  appearance: none;
+                                  backface-visibility: hidden;
+                                  -webkit-transition: background 0.15s ease;
+                                  transition: background 0.15s ease;
+                                }
+                                
+                                .btn-flipside.is-open .btn-flipside__front {
+                                  pointer-events: none;
+                                }
+                                
+                                .btn-flipside__back {
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  background-color: var(--secondary-color);
+                                    color: var(--white-color);
+                                  -webkit-transform: translateZ(-2px) rotateX(180deg);
+                                  transform: translateZ(-2px) rotateX(180deg);
+                                  overflow: hidden;
+                                  display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                
+                                .btn-flipside__close {
+                                  position: absolute;
+                                    right: 12px;
+                                    top: 12px;
+                                    margin: 0;
+                                    border: none;
+                                    outline: none;
+                                    padding: 12px;
+                                    -webkit-appearance: none;
+                                  appearance: none;
+                                  display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      background: transparent;
+                                }
+                                
+                                .btn-flipside[data-direction="left"] .btn-flipside__back,
+                                .btn-flipside[data-direction="right"] .btn-flipside__back {
+                                  -webkit-transform: translateZ(-2px) rotateY(180deg);
+                                  transform: translateZ(-2px) rotateY(180deg);
+                                }
+                                
+                                .btn-flipside.is-open {
+                                  width: 100vh;
+                                    height: 100vh;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: 9;
+                                }
+                                
+                                .btn-flipside[data-direction="top"].is-open {
+                                  -webkit-transform: rotateX(180deg);
+                                  transform: rotateX(180deg);
+                                }
+                                
+                                .btn-flipside[data-direction="right"].is-open {
+                                  -webkit-transform: rotateY(180deg);
+                                  transform: rotateY(180deg);
+                                }
+                                
+                                .btn-flipside[data-direction="bottom"].is-open {
+                                  -webkit-transform: rotateX(-180deg);
+                                  transform: rotateX(-180deg);
+                                }
+                                
+                                .btn-flipside[data-direction="left"].is-open {
+                                  -webkit-transform: rotateY(-180deg);
+                                  transform: rotateY(-180deg);
+                                }
+                                
+                                @media (hover: hover) {
+                                .btn-flipside__front {
+                                  cursor: pointer;
+                                }
+                                
+                                .btn-flipside__back button {
+                                  cursor: pointer;
+                                }
+                                }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.querySelectorAll('.btn-flipside').forEach(btn => {
+                            const html = document.querySelector('html')
+                            const btnFront = btn.querySelector( '.btn-flipside__front' )
+                            const btnClose = btn.querySelector( '.btn-flipside__back .btn-flipside__close' )
+                          btnFront.addEventListener( 'click', function( event ) {
+                            const mx = event.clientX - btn.offsetLeft,
+                                my = event.clientY - btn.offsetTop;
+                          
+                            const w = btn.offsetWidth,
+                                h = btn.offsetHeight;
+                            
+                            const directions = [
+                              { id: 'top', x: w/2, y: 0 },
+                              { id: 'right', x: w, y: h/2 },
+                              { id: 'bottom', x: w/2, y: h },
+                              { id: 'left', x: 0, y: h/2 }
+                            ];
+                            
+                            directions.sort( function( a, b ) {
+                              return distance( mx, my, a.x, a.y ) - distance( mx, my, b.x, b.y );
+                            } );
+                            
+                            btn.setAttribute( 'data-direction', directions.shift().id );
+                            btn.classList.add( 'is-open' );
+                            html.classList.add( 'is-open' );
+                          } );
+                          
+                          btnClose.addEventListener( 'click', function( event ) {
+                            btn.classList.remove( 'is-open' );
+                            html.classList.remove( 'is-open' );
+                          } );
+                          
+                          function distance( x1, y1, x2, y2 ) {
+                            var dx = x1-x2;
+                            var dy = y1-y2;
+                            return Math.sqrt( dx*dx + dy*dy );
+                          }
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Play -->
+<section id="btn-play">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>9.Button Play</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-play">
+                    <span class="btn-play__start"></span>
+                    <span class="btn-play__stop"></span>
+                  </button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-play">
+                    <span class="btn-play__start"></span>
+                    <span class="btn-play__stop"></span>
+                  </button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-play">
+                    <span class="btn-play__start"></span>
+                    <span class="btn-play__stop"></span>
+                  </button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-play">
+                    <span class="btn-play__start"></span>
+                    <span class="btn-play__stop"></span>
+                  </button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-play">
+                        <span class="btn-play__start"></span>
+                        <span class="btn-play__stop"></span>
+                      </button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-play {
+                                width: 180px;
+                                height: 180px;
+                                border-radius: 50%;
+                                outline: none;
+                                background: var(--primary-color);
+                                border: 0;
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                              }
+                              
+                              .btn-play::before {
+                                content: "";
+                                position: absolute;
+                                z-index: 10;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                border-radius: 50%;
+                                background: var(--secondary-color);
+                                transform: scale(0);
+                                transform-origin: 83% 86%;
+                                transition-property: transform;
+                                transition-duration: 0.5s;
+                                transition-timing-function: ease-out;
+                              }
+                              
+                              .btn-play.active::before {
+                                transition-timing-function: ease;
+                                transform: scale(1);
+                              }
+                              
+                              .btn-play__start {
+                                width: 65px;
+                                height: 65px;
+                                background: var(--white-color);
+                                margin-left: 15px;
+                                z-index: 100;
+                                clip-path: polygon(0 0, 80% 48%, 0 100%, 0% 100%);
+                                transition: clip-path 0.5s ease;
+                                transition-delay: 0.4s;
+                              }
+                              
+                              .btn-play__start.active {
+                                transition: clip-path 0.1s;
+                                clip-path: polygon(0 0, 27% 0, 27% 100%, 0% 100%);
+                              }
+                              
+                              .btn-play__stop {
+                                width: 18px;
+                                height: 15px;
+                                background: var(--white-color);
+                                position: absolute;
+                                left: 65px;
+                                z-index: 100;
+                                bottom: 59px;
+                                opacity: 0;
+                                transition: opacity 1s;
+                              }
+                              
+                              .btn-play__stop.pauseToPlay {
+                                animation: pauseToPlay 0.4s ease alternate-reverse;
+                              }
+                              
+                              @keyframes pauseToPlay {
+                                10% {
+                                  transform: rotate(90deg);
+                                  left: 73px;
+                                }
+                                20%,
+                                40% {
+                                  transform: rotate(180deg);
+                                  left: 92px;
+                                }
+                                50% {
+                                  left: 92px;
+                                  height: 66px;
+                                  bottom: 57px;
+                                  transform: rotate(180deg);
+                                }
+                                100% {
+                                  left: 92px;
+                                  height: 66px;
+                                  bottom: 57px;
+                                  transform: rotate(180deg);
+                                }
+                              }
+                              
+                              .btn-play__stop.active {
+                                opacity: 1;
+                                transition: opacity 1s;
+                                animation: move 0.8s cubic-bezier(0.52, 1.64, 0.37, 0.66) forwards;
+                                animation-delay: 0.2s;
+                              }
+                              
+                              @keyframes move {
+                                10% {
+                                  transform: rotate(90deg);
+                                  left: 73px;
+                                }
+                                20%,
+                                40% {
+                                  transform: rotate(180deg);
+                                  left: 92px;
+                                }
+                                50% {
+                                  left: 92px;
+                                  height: 66px;
+                                  bottom: 57px;
+                                  transform: rotate(180deg);
+                                }
+                                100% {
+                                  left: 92px;
+                                  height: 66px;
+                                  bottom: 57px;
+                                  transform: rotate(180deg);
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const buttons = document.querySelectorAll('.btn-play');
+                          
+                            buttons.forEach(function (button) {
+                              button.addEventListener('click', function () {
+                                const start = button.querySelectorAll('.btn-play__start');
+                                const stop = button.querySelectorAll('.btn-play__stop');
+                          
+                                button.classList.toggle('active');
+                                start.forEach(function (el) {
+                                  el.classList.toggle('active');
+                                });
+                                stop.forEach(function (el) {
+                                  el.classList.toggle('active');
+                                });
+                          
+                                stop.forEach(function (el) {
+                                  if (el.classList.contains('active')) {
+                                    el.classList.remove('pauseToPlay');
+                                  } else {
+                                    el.classList.add('pauseToPlay');
+                                  }
+                                });
+                              });
+                            });
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Magnetic -->
+<section id="btn-magnetic">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>10.Button Magnetic</h2>
+            </div>
+            <div class="col-12 col-lg-6">
+                <button class="btn-magnetic">
+                    <span>Hover me</span>
+                    <div class="btn-magnetic__particles"></div>
+                </button>
+            </div>
+            <div class="col-12 col-lg-6">
+                <button class="btn-magnetic">
+                    <span>Hover me</span>
+                    <div class="btn-magnetic__particles"></div>
+                </button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-magnetic">
+                        <span>Hover me</span>
+                        <div class="btn-magnetic__particles"></div>
+                    </button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-magnetic {
+                                margin: 0;
+                                  border: none;
+                                  outline: none;
+                                  position: relative;
+                                  padding: 1.5rem 3rem;
+                                  font-size: 1.5rem;
+                                  color: var(--white-color);
+                                  background: var(--primary-color);
+                                  -webkit-appearance: none;
+                                appearance: none;
+                                overflow: visible;
+                                cursor: pointer;
+                                -webkit-transition: all 0.4s ease;
+                                transition: all 0.4s ease;
+                                z-index: 1;
+                              }
+                              
+                              .btn-magnetic__particles {
+                                position: absolute;
+                                inset: -100%;
+                                opacity: 0;
+                                -webkit-transition: opacity 0.3s ease;
+                                transition: opacity 0.3s ease;
+                              }
+                              
+                              .particle {
+                                position: absolute;
+                                width: 4px;
+                                height: 4px;
+                                background: var(--secondary-color);
+                                border-radius: 50%;
+                              }
+                              
+                              @keyframes particleFloat {
+                                0% { transform: translate(var(--x), var(--y)) scale(0); }
+                                50% { transform: translate(calc(var(--x) * -1), calc(var(--y) * -1)) scale(1); }
+                                100% { transform: translate(var(--x), var(--y)) scale(0); }
+                              }
+                              
+                              @media (hover: hover) {
+                                .btn-magnetic:hover {
+                                  cursor: pointer;
+                                }
+                              
+                                .btn-magnetic:hover .btn-magnetic__particles {
+                                  opacity: 1;
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.querySelectorAll('.btn-magnetic__particles').forEach(btn => {
+                            for (let i = 0; i < 50; i++) {
+                              const particle = document.createElement('div');
+                              particle.className = 'particle';
+                              particle.style.setProperty('--x', `${Math.random() * 200 - 100}px`);
+                              particle.style.setProperty('--y', `${Math.random() * 200 - 100}px`);
+                              particle.style.animation = `particleFloat ${1 + Math.random() * 2}s infinite`;
+                              particle.style.left = `${Math.random() * 100}%`;
+                              particle.style.top = `${Math.random() * 100}%`;
+                              btn.appendChild(particle);
+                          }
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Animate -->
+<section id="btn-animate">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>11.Button Animate</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-animate" data-clicked="Clicked!">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-animate" data-clicked="Clicked!">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-animate" data-clicked="Clicked!">Click me</button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-animate" data-clicked="Clicked!">Click me</button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-animate" data-clicked="Clicked!">Click me</button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-animate {
+                                margin: 0;
+                                border: none;
+                                outline: none;
+                                position: relative;
+                                min-width: 200px;
+                                padding: 1.5rem 3rem;
+                                font-size: 1.5rem;
+                                color: var(--white-color);
+                                background: var(--primary-color);
+                                -webkit-appearance: none;
+                              appearance: none;
+                                overflow: hidden;
+                                -webkit-transition: 300ms ease-in-out;
+                                transition: 300ms ease-in-out;
+                              }
+                              
+                              .btn-animate > span { 
+                              display: inline-block; 
+                              -webkit-transition: translate 300ms ease-in-out;
+                              transition: translate 300ms ease-in-out;
+                              }
+                              
+                              @media (hover: hover) {
+                                .btn-animate:hover {
+                                  cursor: pointer;
+                                }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        const buttons = document.querySelectorAll(".btn-animate");
+                        buttons.forEach((btn) => {
+                          const BUTTON_CONFIG = {
+                            text: {
+                              initial: btn.innerText.trim(), 
+                              clicked: btn.dataset.clicked
+                            },
+                            bgColor: {
+                              initial: "#1C74DC",
+                              clicked: "#0fcd81"
+                            }
+                          };
+                        
+                          const wrappedText = BUTTON_CONFIG.text.initial
+                          .split("")
+                          .map((letter) => `<span>${letter === " " ? "&nbsp;" : letter}</span>`)
+                          .join("");
+                        btn.innerHTML = wrappedText;
+                        
+                          let btnClicked = false;
+                          btn.addEventListener("click", () => {
+                            btnClicked = !btnClicked;
+                            const txtToShow = btnClicked
+                              ? BUTTON_CONFIG.text.clicked
+                              : BUTTON_CONFIG.text.initial;
+                            let delay = 0;
+                            btn.querySelectorAll("span").forEach((sp, idx) => {
+                              setTimeout(() => {
+                                sp.style.translate = "0 -50px";
+                                setTimeout(() => {
+                                  sp.innerHTML = txtToShow[idx] === ' ' ? '&nbsp;' : txtToShow[idx];
+                                }, 100);
+                                setTimeout(() => {
+                                  sp.style.translate = "0";
+                                }, delay + 500);
+                              }, delay);
+                              delay += 30;
+                            });
+                            setTimeout(() => {
+                              btn.style.backgroundColor = btnClicked
+                                ? BUTTON_CONFIG.bgColor.clicked
+                                : BUTTON_CONFIG.bgColor.initial;
+                            }, delay);
+                          });
+                        });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Button Toggle -->
+ <section id="btn-toggle">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>12.Button Toggle</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+<fieldset class="btn-toggle active">
+    <input type="checkbox"  checked class="btn-toggle__value" />
+    <span class="btn-toggle__round"></span>
+  </fieldset>
+            </div>
+            <div class="col-12 col-lg-3">
+<fieldset class="btn-toggle active">
+    <input type="checkbox"  checked class="btn-toggle__value" />
+    <span class="btn-toggle__round"></span>
+  </fieldset>
+            </div>
+            <div class="col-12 col-lg-3">
+<fieldset class="btn-toggle active">
+    <input type="checkbox"  checked class="btn-toggle__value" />
+    <span class="btn-toggle__round"></span>
+  </fieldset>
+            </div>
+            <div class="col-12 col-lg-3">
+<fieldset class="btn-toggle active">
+    <input type="checkbox"  checked class="btn-toggle__value" />
+    <span class="btn-toggle__round"></span>
+  </fieldset>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <fieldset class="btn-toggle active">
+                        <input type="checkbox"  checked class="btn-toggle__value" />
+                        <span class="btn-toggle__round"></span>
+                      </fieldset>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            fieldset {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            
+                            .btn-toggle {
+                                -webkit-appearance: none;
+                                appearance: none;
+                              width: 80px;
+                              height: 40px;
+                              border-radius: 50px;
+                              display: inline-block;
+                              position: relative;
+                              background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyklEQVQ4T42TaxHCQAyENw5wAhLACVUAUkABOCkSwEkdhNmbpHNckzv689L98toIAKjqGcAFwElEFr5ln6ruAMwA7iLyFBM/TPDuQSrxwf6fCKBoX2UMIYGYkg8BLOnVg2RiAEexGaQQq4w9e9klcxGLLAUwgDAcihlYAR1IvZA1sz/+AAaQjXhTQQVoe2Yo3E7UQiT2ijeQdojRtClOfVKvMVyVpU594kZK9zzySWTlcNqZY9tjCsUds00+A57z1e35xzlzJjee8xf0HYp+cOZQUQAAAABJRU5ErkJggg==') no-repeat 50px center #e74c3c;
+                              -webkit-transition: background-color .40s ease-in-out;
+                              transition: background-color .40s ease-in-out;
+                              &.active{
+                                background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmUlEQVQ4T6WT0RWDMAhFeZs4ipu0mawZpaO4yevBc6hUIWLNd+4NeQDk5sE/PMkZwFvZywKSTxF5iUgH0C4JHGyF97IggFVSqyCFga0CvQSg70Mdwd8QSSr4sGBMcgavAgdvwQCtApvA2uKr1x7Pu++06ItrF5LXPB/CP4M0kKTwYRIDyRAOR9lJTuF0F0hOAJbKopVHOZN9ACS0UgowIx8ZAAAAAElFTkSuQmCC') no-repeat 10px center #2ecc71;
+                                .btn-toggle__round {
+                                  left: 45px;
+                                }
+                              }
+                            }
+                            
+                              .btn-toggle__round {
+                                width: 30px;
+                                height: 30px;
+                                background-color: #fff;
+                                border-radius: 50%;
+                                display: inline-block;
+                                position: absolute;
+                                left: 5px;
+                                top: 50%;
+                                margin-top: -15px;
+                                -webkit-transition: all .30s ease-in-out;
+                              transition: all .30s ease-in-out;
+                              }
+                            
+                              .btn-toggle__value {
+                                position: absolute;
+                                left:0;
+                                right:0;
+                              margin: 0;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                z-index: 9;
+                                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                              }
+                            
+                            @media (hover: hover) {
+                                .btn-toggle:hover {
+                                    cursor: pointer;
+                                }
+                            
+                                .btn-toggle__value:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <button data-btn="tab">
+                      JS
+                    </button>
+                    <div class="content" data-content="tab">
+                      <textarea>
+                        document.querySelectorAll('.btn-toggle__value').forEach(function(btn) {
+                            btn.addEventListener('click', function() {
+                              const mainParent = btn.closest('.btn-toggle');
+                              const checkbox = mainParent.querySelector('.btn-toggle__value');
+                              
+                              if (checkbox.checked) {
+                                mainParent.classList.add('active');
+                              } else {
+                                mainParent.classList.remove('active');
+                              }
+                            });
+                          });
+                      </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Menu -->
+<section id="btn-menu">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>13.Button Menu</h2>
+            </div>
+            <div class="col-12 col-lg-12">
+                <div class="block">
+                    <input id="toggle" type="checkbox">
+                    <label class="toggle-container" for="toggle">
+                        <span class="button button-toggle"></span>
+                    </label>
+                    <nav class="nav">
+                        <a class="nav-item" href="">Dashboard</a>
+                        <a class="nav-item" href="">History</a>
+                        <a class="nav-item" href="">Statistics</a>
+                        <a class="nav-item" href="">Settings</a>
+                    </nav>
+                </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <div class="block">
+                        <input id="toggle" type="checkbox">
+                        <label class="toggle-container" for="toggle">
+                            <span class="button button-toggle"></span>
+                        </label>
+                        <nav class="nav">
+                            <a class="nav-item" href="">Dashboard</a>
+                            <a class="nav-item" href="">History</a>
+                            <a class="nav-item" href="">Statistics</a>
+                            <a class="nav-item" href="">Settings</a>
+                        </nav>
+                    </div>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .block {
+                                position: relative;
+                                background-color: var(--primary-color);
+                                overflow: hidden;
+                              }
+                              
+                              #toggle {
+                                display: none;
+                              }
+                              
+                              #toggle:checked ~ .toggle-container .button-toggle {
+                                box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+                              }
+                              
+                              #toggle:checked ~ .toggle-container .button-toggle:before {
+                                transform: translateY(-50%) rotate(45deg) scale(1);
+                              }
+                              
+                              #toggle:checked ~ .toggle-container .button-toggle:after {
+                                transform: translateY(-50%) rotate(-45deg) scale(1);
+                              }
+                              
+                              #toggle:checked ~ .nav {
+                                margin-bottom: 100px;
+                                pointer-events: auto;
+                                transform: translate(50px, 50px);
+                              }
+                              
+                              #toggle:checked ~ .nav .nav-item {
+                                color: var(--secondary-color);
+                                letter-spacing: 0;
+                                height: 40px;
+                                line-height: 40px;
+                                margin-top: 0;
+                                opacity: 1;
+                                transform: scaleY(1);
+                                transition: 0.5s, opacity 0.1s;
+                              }
+                              
+                              #toggle:checked ~ .nav .nav-item:nth-child(1) {
+                                transition-delay: 0.15s;
+                              }
+                              #toggle:checked ~ .nav .nav-item:nth-child(2) {
+                                transition-delay: 0.1s;
+                              }
+                              #toggle:checked ~ .nav .nav-item:nth-child(3) {
+                                transition-delay: 0.05s;
+                              }
+                              #toggle:checked ~ .nav .nav-item:nth-child(4) {
+                                transition-delay: 0s;
+                              }
+                              
+                              #toggle:checked ~ .nav .nav-item:before {
+                                opacity: 0;
+                              }
+                              
+                              .button-toggle {
+                                position: absolute;
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                margin: 25px;
+                                background-color: transparent;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 100%;
+                                transition: 0.6s;
+                              }
+                              
+                              .button-toggle:hover {
+                                box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+                              }
+                              
+                              .button-toggle:before,
+                              .button-toggle:after {
+                                position: absolute;
+                                content: '';
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: var(--secondary-color);
+                                border-radius: 5px;
+                                transition: 0.5s;
+                              }
+                              
+                              .button-toggle:before {
+                                transform: translateY(-50%) rotate(45deg) scale(0);
+                              }
+                              
+                              .button-toggle:after {
+                                transform: translateY(-50%) rotate(-45deg) scale(0);
+                              }
+                              
+                              .nav {
+                                display: inline-block;
+                                margin: 25px 25px 20px;
+                                pointer-events: none;
+                                transition: 0.5s;
+                              }
+                              
+                              .nav-item {
+                                position: relative;
+                                display: inline-block;
+                                float: left;
+                                clear: both;
+                                color: transparent;
+                                font-size: 14px;
+                                letter-spacing: -6.2px;
+                                height: 7px;
+                                line-height: 7px;
+                                text-transform: uppercase;
+                                white-space: nowrap;
+                                transform: scaleY(0.2);
+                                transition: 0.5s, opacity 1s;
+                              }
+                              
+                              .nav-item:nth-child(1) {
+                                transition-delay: 0s;
+                              }
+                              
+                              .nav-item:nth-child(2) {
+                                transition-delay: 0.05s;
+                              }
+                              
+                              .nav-item:nth-child(3) {
+                                transition-delay: 0.1s;
+                              }
+                              
+                              .nav-item:nth-child(4) {
+                                transition-delay: 0.15s;
+                              }
+                              
+                              .nav-item:nth-child(1) {
+                                letter-spacing: -8px;
+                              }
+                              
+                              .nav-item:nth-child(2) {
+                                letter-spacing: -7px;
+                              }
+                              
+                              .nav-item:nth-child(n + 4) {
+                                letter-spacing: -8px;
+                                margin-top: -7px;
+                                opacity: 0;
+                              }
+                              
+                              .nav-item:before {
+                                position: absolute;
+                                content: '';
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: var(--secondary-color);
+                                transform: translateY(-50%) scaleY(5);
+                                transition: 0.5s;
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Flush -->
+<section id="btn-flush">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>14. Button Flush</h2>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-flush" style="--content: 'Hover me';">
+                    <div class="left"></div>
+                      Hover me
+                    <div class="right"></div>
+                  </button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-flush" style="--content: 'Hover me';">
+                    <div class="left"></div>
+                      Hover me
+                    <div class="right"></div>
+                  </button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-flush" style="--content: 'Hover me';">
+                    <div class="left"></div>
+                      Hover me
+                    <div class="right"></div>
+                  </button>
+            </div>
+            <div class="col-12 col-lg-3">
+                <button class="btn-flush" style="--content: 'Hover me';">
+                    <div class="left"></div>
+                      Hover me
+                    <div class="right"></div>
+                  </button>
+            </div>
+            <div class="col-12">
+                <div class="tabs">
+                <div class="tab">
+                    <button data-btn="tab">
+                      HTML
+                    </button>
+                    <div class="content open" data-content="tab">
+                <textarea>
+                    <button class="btn-flush" style="--content: 'Hover me';">
+                        <div class="left"></div>
+                          Hover me
+                        <div class="right"></div>
+                      </button>
+                </textarea>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button data-btn="tab">
+                      CSS
+                    </button>
+                    <div class="content" data-content="tab">
+                        <textarea>
+                            .btn-flush {
+                                -webkit-appearance: none;
+                                appearance: none;
+                                margin: 0;
+                                border: none;
+                                outline: none;
+                                position: relative;
+                                padding: 1.5rem 3rem;
+                                font-size: 1.5rem;
+                                color: var(--white-color);
+                                background: var(--primary-color);
+                                z-index: 0;  
+                                overflow: hidden;   
+                              }
+                              
+                              .btn-flush .right::after, .btn-flush::after {
+                                content: var(--content);
+                                display: block;
+                                position: absolute;
+                                white-space: nowrap;
+                                padding: 1.5rem 3rem;
+                                pointer-events:none;
+                              }
+                              
+                              .btn-flush::after{
+                                top: 0;
+                                left: 0;
+                              } 
+                              
+                              .btn-flush .right, .btn-flush .left {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                              }
+                              
+                              .btn-flush .right {
+                                left: 66%;
+                              }
+                              
+                              .btn-flush .left {
+                                right: 66%;
+                              }
+                              
+                              .btn-flush .right::after {
+                                top: -7px;
+                                left: calc(-66% - 20px);
+                                right: calc(66% - 20px);
+                                background-color: var(--secondary-color);
+                                color: transparent;
+                                -webkit-transition: transform .4s ease-out;
+                                transition: transform .4s ease-out;
+                                -webkit-transform: translate(0, -90%) rotate(0deg);
+                                transform: translate(0, -90%) rotate(0deg);
+                              }
+                              
+                              .btn-flush:hover .right::after {
+                                -webkit-transform: translate(0, -38%) rotate(0deg);
+                                transform: translate(0, -38%) rotate(0deg);
+                              }
+                              
+                              .btn-flush .right:hover::after {
+                                -webkit-transform: translate(0, -50%) rotate(-7deg);
+                                transform: translate(0, -50%) rotate(-7deg);
+                              }
+                              
+                              .btn-flush .left:hover ~ .right::after {
+                                -webkit-transform: translate(0, -50%) rotate(7deg);
+                                transform: translate(0, -50%) rotate(7deg);
+                              }
+                              
+                              @media (hover: hover) {
+                              .btn-flush:hover {
+                                cursor: pointer;
+                              }
+                              }
+                        </textarea>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Button Flip -->
+    <section id="btn-flip">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12">
+                    <h2>15.Button Flip</h2>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-flip" data-back="Hover me" data-front="Hover me"></button>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-flip" data-back="Hover me" data-front="Hover me"></button>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-flip" data-back="Hover me" data-front="Hover me"></button>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <button class="btn-flip" data-back="Hover me" data-front="Hover me"></button>
+                </div>
+                <div class="col-12">
+                    <div class="tabs">
+                    <div class="tab">
+                        <button data-btn="tab">
+                          HTML
+                        </button>
+                        <div class="content open" data-content="tab">
+                    <textarea>
+                        <button class="btn-flip" data-back="Hover me" data-front="Hover me"></button>
+                    </textarea>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <button data-btn="tab">
+                          CSS
+                        </button>
+                        <div class="content" data-content="tab">
+                            <textarea>
+                                .btn-flip {
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    margin: 0;
+                                  border: none;
+                                  outline: none;
+                                  position: relative;
+                                  font-size: 1.5rem;
+                                  color: var(--white-color);
+                                  background: var(--primary-color);
+                                      opacity: 1;
+                                      padding: 0;
+                                      background: var(--system-color);
+                                      }
+                              
+                                            .btn-flip:after {
+                                        top: 0;
+                                        left: 0;
+                                        opacity: 0;
+                                        color: var(--white-color);
+                                        display: block;
+                                        transition: .5s;
+                                        position: absolute;
+                                        padding: 1.5rem 3rem;
+                                        background: var(--secondary-color);
+                                        content: attr(data-back);
+                                        transform: translateY(-50%) rotateX(90deg);
+                                      }
+                                      
+                                      .btn-flip:before {
+                                        top: 0;
+                                        left: 0;
+                                        opacity: 1;
+                                        color: var(--white-color);
+                                        display: block;
+                                        padding: 1.5rem 3rem;
+                                        transition: .5s;
+                                        position: relative;
+                                        background: var(--primary-color);
+                                        content: attr(data-front);
+                                        transform: translateY(0) rotateX(0);
+                                    }
+                              
+                                  @media (hover: hover) {
+                                    .btn-flip:hover {
+                                      cursor: pointer;
+                                    }
+                              
+                                      .btn-flip:hover:after {
+                                          opacity: 1;
+                                          transform: translateY(0) rotateX(0);
+                                        }
+                                        
+                                        .btn-flip:hover:before {
+                                          opacity: 0;
+                                          transform: translateY(50%) rotateX(90deg);
+                                        } 
+                              
+                                  }
+                              
+                            </textarea>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<script src="./index.js"></script>
+<script src="./assets/buttons.js"></script>
+<script src="./assets/tabs.js"></script>
+</body>
+</html>

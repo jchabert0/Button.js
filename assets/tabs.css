@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  margin-bottom: 200px;
+  margin-top: 40px;
+}
+
+.tab .content:not(.open) {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+
+  .tab button {
+    margin: 0;
+    padding: 1rem 2rem;
+    background: var(--system-color);
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .tab textarea {
+    position: absolute;
+    left: 16px;
+    width: calc(100% - 41px);
+    padding: 1rem 2rem;
+    min-width: 500px;
+    min-height: 200px;
+    background: var(--white-color);
+    border: solid 1px var(--system-color);
+  }

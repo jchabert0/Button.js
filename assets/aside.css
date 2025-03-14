@@ -1,0 +1,30 @@
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--white-color);
+    z-index: 9999999;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+    -webkit-box-shadow: 0 3px 6px var(--system-color);
+    box-shadow: 0 3px 6px var(--system-color);
+    height: 100%;
+}
+
+aside h3 {
+    color: var(--black-color);
+}
+
+aside ol {
+    margin: 0;
+    padding: 0;
+}
+
+aside ol li {
+    padding-bottom: 1em;
+}
+
+aside ol li a {
+    text-decoration: none;
+    color: var(--black-color);
+}
